@@ -1,0 +1,52 @@
+{
+  "name": "usehope",
+  "version": "0.0.1",
+  "description": "The open source application that encourages blood donation, informing the nearest donation places, connecting you to those who need help.",
+  "homepage": "https://usehope.org",
+  "repository": "usehope/usehope",
+  "license": "MIT",
+  "author": "CJ Patoilo <cjpatoilo@gmail.com>",
+  "bin": "index.js",
+  "main": "readme.md",
+  "keywords": [
+    "🐥",
+    "app",
+    "blood",
+    "donate",
+    "hope",
+    "opensource",
+    "repository",
+    "github"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "ava": "^3.11.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier-standard": "^16.4.1"
+  },
+  "scripts": {
+    "lint": "prettier-standard --check",
+    "test": "ava"
+  },
+  "engines": {
+    "node": "^12.18.0",
+    "npm": "^6.14.5"
+  },
+  "prettier": {
+    "jsxSingleQuote": false,
+    "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier-standard --format",
+      "git add"
+    ]
+  }
+}
